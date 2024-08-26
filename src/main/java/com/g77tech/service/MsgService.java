@@ -9,4 +9,9 @@ public class MsgService {
 		String msg = "Welcome to g77tech";
 		return msg;
 	}
+
+	public String greetMsg(){
+		String greetMsg = "Good Mornings";
+		return greetMsg;
+	}
 }

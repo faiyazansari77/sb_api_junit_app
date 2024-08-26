@@ -24,4 +24,13 @@ public class MsgRestController {
 		
 		return welcomeMsg;
 	}
+
+	@GetMapping("/greet")
+    public String getGreetMsg() {
+		String greetMsg = service.greetMsg();
+		System.out.println(greetMsg);
+		greetMsg = greetMsg.toUpperCase();
+		System.out.println(greetMsg);
+		return greetMsg;
+    }
 }

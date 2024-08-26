@@ -19,7 +19,7 @@ public class CalculatorTest {
 	public void mulTest() {
 		Calculator c = new Calculator();
 		int actualResult = c.mul(10, 20);
-		assertEquals(2000, actualResult);
+		assertEquals(200, actualResult);
 	}
 	
 

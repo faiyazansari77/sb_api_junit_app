@@ -43,5 +43,16 @@ public class MsgRestControllerTest {
 		
 		assertEquals(200, status);
 	}
+
+	@Test
+	public void testGreetMsg() throws Exception {
+
+		when(service.greetMsg()).thenReturn("Namaste World");
+		MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/greet");
+		MvcResult mvcResult = mockMvc.perform(requestBuilder).andReturn();
+		MockHttpServletResponse response = mvcResult.getResponse();
+		int status = response.getStatus();
+		assertEquals(200, status);
+	}
 	
 }
